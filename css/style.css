@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-items: flex-end;
+    font-family: 'Roboto';
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+footer{
+    width: 100%;
+    padding: 70px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)) ,url(../img/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 80%;
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 40px 35px;
+    align-items: flex-start;
+}
+.row .col{
+    width: 100%;
+    max-width: 320px;
+}
+
+.row .col a.logo{
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+    padding: 5px 25px;
+    border: 3px solid #fff;
+    border-right: none;
+    border-left: 20px solid #fff;
+    margin-bottom: 25px;
+}
+.row .col p{
+    color: #fff;
+    font-size: 17px;
+    line-height: 26px;
+    padding-bottom: 25px;
+}
+.row .col ul.social li{
+    display: inline-block;
+    margin: 15px;
+    margin-left: 0;
+}
+.row .col ul.social li a{
+    font-size: 20px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    transition: 0.3s ease-out;
+}
+.row .col ul.social li a:hover{
+    background: #fff;
+    color: #000;
+}
+
+.row .col h4{
+    font-size: 24px;
+    line-height: 33px;
+    color: #fff;
+    text-transform: capitalize;
+    padding-bottom: 35px;
+}
+
+.row .col h4 ~ ul li a{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    padding: 5px 0;
+    margin-bottom: 8px;
+    transition: 0.3s ease-out;
+}
+
+.row .col h4 ~ ul li a:hover{
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+
+/* responsive ======================= */
+
+@media (max-width: 991px) {
+    .row{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .row{
+        grid-template-columns: 1fr;
+    }
+    .row .col{
+        width: 90%;
+        max-width: none;
+    }
+}
